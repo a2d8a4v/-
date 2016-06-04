@@ -46,9 +46,6 @@ http://data.gov.tw/node/8066#comment-6241
 價格折線圖http://matplotlib.org/examples/api/date_index_formatter.html
 不同月份和不同年份的折線圖疊合http://matplotlib.org/examples/showcase/bachelors_degrees_by_gender.html
 
-
-
-
 資料：
 a.當天若是休市，會變成這樣子的資料型態
 { "交易日期":"104.12.28","作物代號":"rest","作物名稱":"休市","市場代號":"109","市場名稱":"台北一","上價":"0","中價":"0","下價":"0","平均價":"0","交易量":"0"}
