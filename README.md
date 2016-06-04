@@ -1,14 +1,18 @@
 # -
 此為使用python 3語言所寫的api串接示範，並且利用matplt繪製圖片，讓大家瞭解現在市場的牛蒡價量與產銷價差情形。
 
-＊使用方式：
+@使用方式：
 所有檔案請按照上面放的方式放在電腦裡面
 要跑ipynb格式，請先下載jupyter notebook使用，或是ipython notebook
 
-＊py檔案請等我最近有空再放上來～
+@注意事項
+要跑py，請記得先在電腦裡面安裝python3，我使用的版本是python 3.5
+另外我寫py的話會使用sublime text 3，關於python3的build檔案我也放在這裡了
+下載後請把當中的“Python3.sublime-build”檔案放在：/library/Applicaiton Support/Sublime text 3/Packages/User/
 
 # -
 
+@參考資源：
 http://data.coa.gov.tw/Query/ServiceDetail.aspx?id=037
 資料從100年到至今
 http://m.coa.gov.tw/outside/transaction/View.aspx?productCateCode=N04&productCode=SM1&YYYYMMDD=20160401
@@ -20,33 +24,12 @@ http://amis.afa.gov.tw/others/iii2.htm
 http://data.gov.tw/node/8066#comment-6241
 關於api的說明
 
-星期一會休市
-
+@資料
 提供資料包含：交易日期、作物代號、作物名稱、市場代號、市場名稱、上價(元/公斤)、中價(元/公斤)、下價(元/公斤)、平均價(元/公斤) 、交易量(公斤)等欄位資料。
-
+原始資料長的樣子：{ “date”:”104.12.28","作物代號":"rest","作物名稱":"休市","市場代號":"109","市場名稱":"台北一","上價":"0","中價":"0","下價":"0","平均價":"0","交易量":"0"}
 注意只查一天可能會查到休市的情況，這樣會沒有資料跑出來，變成空集合。
 
-圖表繪製：
-總交易量170157 公斤 總平均價23.84 元/公斤 平均交易量204.76 公斤/日
-個別市場的不同天的「交易量」圖表
-個別市場的不同天的「價格」圖表
-所有市場的「總交易」量圖表
-所有市場的「每天價格」圖表
-不同市場的交易狀況
-產季時的價量
-全時間當中最高行情為
-全時間檔中最低行情為
-每天的總交易量
-每年總交易量
-市場價格和銷售量之間的關係
-
-＊視覺化的圖形：
-價格的和狀圖 http://matplotlib.org/examples/pylab_examples/boxplot_demo2.html
-疊層圖http://matplotlib.org/examples/api/filled_step.html
-價格折線圖http://matplotlib.org/examples/api/date_index_formatter.html
-不同月份和不同年份的折線圖疊合http://matplotlib.org/examples/showcase/bachelors_degrees_by_gender.html
-
-資料：
+@關於資料：
 a.當天若是休市，會變成這樣子的資料型態
 { "交易日期":"104.12.28","作物代號":"rest","作物名稱":"休市","市場代號":"109","市場名稱":"台北一","上價":"0","中價":"0","下價":"0","平均價":"0","交易量":"0"}
 b.作物代號和作物名稱的關聯
@@ -78,7 +61,7 @@ e.名詞定義
 簡單來說就是，因為從產地把東西分級上中下運送到批發市場拍賣，批發市場會看東西的等級所拍賣出來的價錢當然就不一樣。
 而你去市場買東西，為什麼每個攤販所賣同樣的東西，價錢卻都不一樣，就是因為去批發時貨色不同(等級) 。
 
-存檔：重新定義名稱
+@關於存檔（重新定義名稱）
 交易日期：dat
 作物代號：crs
 作物名稱：cro
@@ -90,4 +73,22 @@ e.名詞定義
 平均價：prm
 交易量：trv
 
-{ “date”:”104.12.28","作物代號":"rest","作物名稱":"休市","市場代號":"109","市場名稱":"台北一","上價":"0","中價":"0","下價":"0","平均價":"0","交易量":"0"}
+@圖表繪製：
+總交易量170157 公斤 總平均價23.84 元/公斤 平均交易量204.76 公斤/日
+個別市場的不同天的「交易量」圖表
+個別市場的不同天的「價格」圖表
+所有市場的「總交易」量圖表
+所有市場的「每天價格」圖表
+不同市場的交易狀況
+產季時的價量
+全時間當中最高行情為
+全時間檔中最低行情為
+每天的總交易量
+每年總交易量
+市場價格和銷售量之間的關係
+
+@參考範例：
+價格的和狀圖 http://matplotlib.org/examples/pylab_examples/boxplot_demo2.html
+疊層圖http://matplotlib.org/examples/api/filled_step.html
+價格折線圖http://matplotlib.org/examples/api/date_index_formatter.html
+不同月份和不同年份的折線圖疊合http://matplotlib.org/examples/showcase/bachelors_degrees_by_gender.html
